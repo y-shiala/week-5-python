@@ -38,9 +38,26 @@ class my_savings(my_bank):
   def apply_interest(self):
     interest = self.get_balance() * self.interest_rate
     self.deposit(interest)
-    print(f"[{self.owner}] Interest of ${interest:.2f} applied.")  
+    print(f"[{self.owner}] Interest of ${interest:.2f} applied.") 
     
- # Activity 2
+    # Sample Usage
+# Creating unique objects
+account1 = my_bank("Alice", 500)
+account2 = my_savings("Bob", 1000, interest_rate=0.05)
+
+# Using the objects
+account1.deposit(200)
+account1.withdraw(100)
+account1.show_info()
+
+print()
+
+account2.deposit(300)
+account2.withdraw(50)
+account2.apply_interest()
+account2.show_info()      
+    
+# Activity 2
  
 class Animal:
     def move(self):
